@@ -4,7 +4,7 @@ describe("utils.addVAT", () => {
   test("returns 36 when passed 30", () => {
     expect(utils.addVAT(30)).toBe(36);
   });
-  
+
   test("returns 120 when passed 100", () => {
     expect(utils.addVAT(100)).toBe(120);
   });
@@ -15,7 +15,7 @@ describe("utils.addVAT", () => {
 });
 describe("utils.getFullName", () => {
   test("returns Haruki Murakami when passed Haruki and Murakami", () => {
-    expect(utils.getFullName("Haruki ", "Murakami")).toBe("Haruki Murakami");
+    expect(utils.getFullName("Haruki", "Murakami")).toBe("Haruki Murakami");
   });
 });
 describe("utils.makeHalfPrice", () => {
@@ -23,9 +23,9 @@ describe("utils.makeHalfPrice", () => {
     expect(utils.makeHalfPrice(10)).toBe(5);
   });
 });
-describe("utils.countBooks", () => {
+describe.only("utils.countBooks", () => {
   test("returns total number of books in the array", () => {
-    expect(utils.countBooks()).toBe(true);
+    expect(utils.countBooks()).toBe();
   });
 });
 describe("utils.isInStock(book)", () => {
@@ -36,12 +36,12 @@ describe("utils.isInStock(book)", () => {
       yearOfPublication: 1993,
       quantity: 9
     };
-  
+
     expect(utils.isInStock(book)).toBe(true);
   });
 })
 describe("utils.getTotalOrderPrice", () => {
-test("returns total price for goods incl VAT", () => {
-expect(utils.getTotalOrderPrice(18, 2)).toBe(43.2);
-});
+  test("returns total price for goods incl VAT", () => {
+    expect(utils.getTotalOrderPrice(18, 2)).toBe(43.2);
+  });
 });
