@@ -8,17 +8,12 @@ function makeHalfPrice(price) {
   return price / 2;
 }
 function countBooks(catalogue) {
-  //   if (!title) throw new Error("Please provide a title");
-  // let result = false;
-  //return total num of books in the array
-  for (let i = 0; i < catalogue.length; i++) {
-    const book = catalogue[i];
-  }
-  // var catalogue = catalogue[i];
-  // if (catalogue.includes(title)) {
+  let i = 0;
+  // for (let i = 0; i < catalogue.length; i++) {
+  const book = catalogue[i];
   return catalogue.length;
-
 }
+
 
 
 
@@ -57,5 +52,5 @@ module.exports = {
   makeHalfPrice,
   countBooks,
   isInStock,
-  getTotalOrderPrice,
-};
+  getTotalOrderPrice
+}

@@ -23,9 +23,23 @@ describe("utils.makeHalfPrice", () => {
     expect(utils.makeHalfPrice(10)).toBe(5);
   });
 });
-describe.only("utils.countBooks", () => {
+describe("utils.countBooks", () => {
   test("returns total number of books in the array", () => {
-    expect(utils.countBooks()).toBe();
+    const books = [
+      {
+        title: "The Stone Diaries",
+        author: "Carol Shields",
+        yearOfPublication: 1993,
+        quantity: 9
+      },
+      {
+        title: "Fantastic Mr Fox",
+        author: "Roald Dahl",
+          yearOfPublication: 1970,
+            quantity: 2
+    }
+    ]
+    expect(utils.countBooks(books)).toBe(2);
   });
 });
 describe("utils.isInStock(book)", () => {
